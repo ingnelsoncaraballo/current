@@ -488,6 +488,7 @@ export default {
     emits: ['update:from', 'update:to', 'update:amount'],
     data() {
         return {
+            url: import.meta.env.VITE_API_URL,
             alertOpen: false,
             messageError: "",
             from: "COP",
@@ -510,7 +511,7 @@ export default {
 
     },
     mounted() {
-        //this.GetListData();
+        console.log(this.url);
     },
     methods: {
         closeAlert() {
@@ -520,7 +521,7 @@ export default {
         getData() {
             //let valor = 10;
             //
-            fetch('http://127.0.0.1:8000/api/convert/' + this.from + '/' + this.to + '/' + this.amount)
+            fetch(this.url + '/convert/' + this.from + '/' + this.to + '/' + this.amount)
                 .then(response => response.json())
                 .then(data => {
                     console.log(data)

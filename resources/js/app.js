@@ -1,5 +1,7 @@
 import './bootstrap';
-import "@fortawesome/fontawesome-free/css/all.min.css";
+import "/node_modules/@fortawesome/fontawesome-free/css/all.min.css";
+import "/node_modules/@fortawesome/fontawesome-free/css/brands.min.css";
+import "/node_modules/@fortawesome/fontawesome-free/css/solid.min.css";
 import "@/assets/styles/tailwind.css";
 
 import { createApp, h } from 'vue';
